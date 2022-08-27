@@ -1,19 +1,23 @@
-.features-list {
+.features {
   display: flex;
   gap: 30px;
 }
 
-.features-icon {
+.features__item {
+  min-width: 270px;
+}
+
+.features__icon {
   height: 120px;
-  background-color: var(--secondary-background-color);
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
   border-radius: 4px;
+  background-color: var(--secondary-background-color);
 }
 
-.features-title {
+.features__title {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -23,11 +27,7 @@
   color: var(--title-text-color);
 }
 
-.features-item {
-  min-width: 270px;
-}
-
-.features-text {
+.features__text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;

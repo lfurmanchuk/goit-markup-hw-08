@@ -1,11 +1,11 @@
-.clients-list {
+.clients {
     display: flex;
     /* margin-right: 30px; */
     margin-top: 50px;
     column-gap: 30px;
 }
 
-.clients-link {
+.clients__link {
     border: 1px solid #afb1b8;
     border-radius: 4px;
     width: 170px;
