@@ -1,14 +1,28 @@
 .clients {
     display: flex;
-    /* margin-right: 30px; */
-    margin-top: 50px;
-    column-gap: 30px;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+    @include desktop {
+        margin-top: 50px;
+    }
+}
+
+.clients__list {
+    width: calc((100% - 30px) / 2);
+
+    @include tablet {
+        width: calc((100% - 60px) / 3);
+    }
+
+    @include desktop {
+        width: calc((100% - 150px) / 6);
+    }
 }
 
 .clients__link {
     border: 1px solid #afb1b8;
     border-radius: 4px;
-    width: 170px;
     height: 92px;
     display: flex;
     justify-content: center;

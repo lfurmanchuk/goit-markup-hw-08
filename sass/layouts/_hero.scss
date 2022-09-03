@@ -10,19 +10,28 @@
     max-width: 1600px;
     margin: 0 auto;
     text-align: center;
+    padding: 118px 0;
+    @include desktop {
     padding: 200px 0;
 }
 
+}
+
 .hero__title {
-    max-width: 696px;
+    max-width: 360px;
     margin: 0 auto;
     margin-bottom: 30px;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--secondary-text-color);
+    @include desktop {
+        font-size: 44px;
+        line-height: 1.36;
+        min-width: 696px;
+    }
 }
 
 .hero__btn {
