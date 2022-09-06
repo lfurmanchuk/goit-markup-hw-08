@@ -1,7 +1,11 @@
 .works {
-    display: flex;
-    margin-top: 50px;
-    column-gap: 30px;
+    display: none;
+    @include desktop {
+        display: flex;
+        margin-top: 50px;
+        column-gap: 30px;
+    }
+    
 }
 
 .works__item {

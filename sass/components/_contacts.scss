@@ -1,14 +1,29 @@
 .contacts {
     display: none;
     margin-left: auto;
-    // display: flex;
-    gap: 50px;
+    
+    @include tablet {
+        display: block;
+    }
+    @include desktop {
+        display: flex;
+        gap: 50px;
+    }
+}
+
+.contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+    @include desktop {
+        margin-bottom: 0;
+    }
 }
 
 .contacts__link {
+    display: block;
+    padding: 32px 0;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
     display: flex;
@@ -21,6 +36,15 @@
     &:focus {
         color: var(--accent-color);
         fill: var(--accent-color);
+    }
+
+    @include tablet {
+        padding: 0;
+    }
+
+    @include desktop {
+        font-size: 14px;
+        line-height: 1.14;
     }
 }
 

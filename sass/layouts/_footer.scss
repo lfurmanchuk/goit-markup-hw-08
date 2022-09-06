@@ -1,8 +1,11 @@
 .footer {
-        text-align: center;
+    text-align: center;
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: var(--hero-background-color);
+    @include desktop {
+        text-align: unset;
+    }
 }
 
         
@@ -10,12 +13,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // align-items: baseline;
     // position: relative;
+    @include tablet {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+    @include desktop {
+        justify-content: unset;
+    }
 }
 
 .footer-box {
     margin-bottom: 60px;
+
+    // @include tablet {
+    //     margin-bottom: 60px;
+    // }
+    @include desktop{
+        margin-right: 70px;
+        margin-bottom: 0;
+    }
+
+    // перевырити маржин райт 70 
 }
 
 .address__list {
@@ -24,10 +45,13 @@
 }
 
 .address__item {
-    // margin-bottom: 9px;
     margin-bottom: 8px;
-    // width: 231px;
-
+    @include desktop {
+        margin-bottom: 9px;
+    }
+    @include desktop {
+        width: 231px;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -51,10 +75,6 @@
     color: var(--secondary-text-color);
 }
 
-// .join-box {
-//     margin-left: 70px;
-// }
-
 .footer__title {
     font-weight: 700;
     font-size: 14px;
@@ -65,24 +85,28 @@
     margin-bottom: 20px;
 }
 
-// .subscribe-box {
-//     // margin-left: 93px;
-    
-// }
+.subscribe-box {
+    @include desktop {
+        margin-left: auto; 
+    }
+}
 
-// .footer__form {
-// display: flex;
-//     flex-wrap: wrap;
-     
-// }
+.footer__form {
+    @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    }   
+}
 
 .footer__field {
-    // position: relative;
-    // margin-right: 12px;
+    position: relative;
     display: flex;
     flex-direction: column;
-   align-items: center;
-   margin-bottom: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    @include desktop {
+        margin-right: 12px;
+    }
 }
 
 .footer__input {
@@ -109,6 +133,9 @@
     align-items: center;
     justify-content: center;
     margin: auto;
+    @include desktop {
+        margin: 0;
+    }
 }
 
 .icon__send {

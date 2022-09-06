@@ -42,7 +42,7 @@
         </nav>
 
         <ul class="contacts">
-          <li>
+          <li class="contacts__item">
             <a href="mailto:info@devstudio.com" class="contacts__link">
               <svg class="contacts__icon" width="16" height="12">
                 <use href="./image/icons.svg#icon-envelope"></use>
@@ -50,7 +50,7 @@
               info@devstudio.com</a
             >
           </li>
-          <li>
+          <li class="contacts__item">
             <a href="tel:+380961111111" class="contacts__link">
               <svg class="contacts__icon" width="10" height="16">
                 <use href="./image/icons.svg#icon-smartphone"></use>
@@ -59,16 +59,17 @@
             >
           </li>
         </ul>
-        <button type="button" class="menu-open-btn" data-menu-open>
+        <button type="button" class="menu-open-btn" data-menu-open aria-label="Перемикач мобільного меню">
           <svg class="menu__icon" width="24" height="16">
                 <use href="./image/icons.svg#icon-menu"></use>
               </svg>
         </button>
       </div>
-
+      
+    <!-- МОБІЛЬНЕ МЕНЮ -->
       <div class="mob-menu is-hidden" data-menu>
         <div class="container">
-          <button type="button" class="menu-close-btn" data-menu-close>
+          <button type="button" class="menu-close-btn" data-menu-close aria-label="Кнопка закриття мобільного меню">
               <svg class="menu__icon" width="18" height="18">
                 <use href="./image/icons.svg#icon-close-nav"></use>
               </svg>
@@ -193,7 +194,7 @@
       </section>
 
       <!-- ЧИМ МИ ЗАЙМАЄМОСЯ -->
-      <!-- <section class="section section--work">
+      <section class="section section--work">
         <div class="container">
           <h2 class="section__title">Чим ми займаємося</h2>
           <ul class="works">
@@ -217,7 +218,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- КОМАНДА -->
       <section class="section section--team">
@@ -225,7 +226,21 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team">
             <li class="team__item">
-              <img src="./image/img4.jpg" alt="Демьяненко" width="270" />
+              <picture>
+                <source 
+                  srcset="./image/img4.jpg 1x, ./image/img4-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                >
+                <source 
+                  srcset="./image/img4-tab.jpg 1x, ./image/img4-tab-2x.jpg 2x"
+                  media="(min-width:768px)"
+                >
+                <source 
+                  srcset="./image/img4-mob.jpg 1x, ./image/img4-mob-2x.jpg 2x"
+                  media="(max-width:767px)"
+                >
+                <img src="./image/img4.jpg" alt="Демьяненко" width="450" />
+              </picture>
               <div class="team__wrap">
                 <h3 class="team__title">Ігор Дем'яненко</h3>
                 <p lang="en" class="team__text">Product Designer</p>
@@ -270,7 +285,21 @@
             </li>
 
             <li class="team__item">
-              <img src="./image/img5.jpg" alt="Репина" width="270" />
+              <picture>
+                <source 
+                  srcset="./image/img5.jpg 1x, ./image/img5-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                >
+                <source 
+                  srcset="./image/img5-tab.jpg 1x, ./image/img5-tab-2x.jpg 2x"
+                  media="(min-width:768px)"
+                >
+                <source 
+                  srcset="./image/img5-mob.jpg 1x, ./image/img5-mob-2x.jpg 2x"
+                  media="(max-width:767px)"
+                >
+                <img src="./image/img5.jpg" alt="Репина" width="450"/>
+              </picture>
               <div class="team__wrap">
                 <h3 class="team__title">Ольга Рєпіна</h3>
                 <p lang="en" class="team__text">Frontend Developer</p>
@@ -311,7 +340,21 @@
             </li>
 
             <li class="team__item">
-              <img src="./image/img6.jpg" alt="Тарасов" width="270" />
+              <picture>
+                <source 
+                  srcset="./image/img6.jpg 1x, ./image/img6-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                >
+                <source 
+                  srcset="./image/img6-tab.jpg 1x, ./image/img6-tab-2x.jpg 2x"
+                  media="(min-width:768px)"
+                >
+                <source 
+                  srcset="./image/img6-mob.jpg 1x, ./image/img6-mob-2x.jpg 2x"
+                  media="(max-width:767px)"
+                >
+                <img src="./image/img6.jpg" alt="Тарасов" width="450"/>
+              </picture>
               <div class="team__wrap">
                 <h3 class="team__title">Микола Тарасов</h3>
                 <p lang="en" class="team__text">Marketing</p>
@@ -352,7 +395,21 @@
             </li>
 
             <li class="team__item">
-              <img src="./image/img7.jpg" alt="Ермаков" width="270" />
+              <picture>
+                <source 
+                  srcset="./image/img7.jpg 1x, ./image/img7-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                >
+                <source 
+                  srcset="./image/img7-tab.jpg 1x, ./image/img7-tab-2x.jpg 2x"
+                  media="(min-width:768px)"
+                >
+                <source 
+                  srcset="./image/img7-mob.jpg 1x, ./image/img7-mob-2x.jpg 2x"
+                  media="(max-width:767px)"
+                >
+                <img src="./image/img7.jpg" alt="Ермаков" width="450"/>
+              </picture>
               <div class="team__wrap">
                 <h3 class="team__title">Михайло Єрмаков</h3>
                 <p lang="en" class="team__text">UI Designer</p>
@@ -453,7 +510,7 @@
     </main>
 
     <!-- ФУТЕР -->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer__container">
         <div class="footer-box">
           <a href="/" class="logo footer__logo" lang="en"
@@ -542,13 +599,13 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <!-- МОДАЛКА -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button data-modal-close class="modal-close-btn">
-          <svg width="30" height="30">
+          <svg width="18" height="18">
             <use href="./image/icons.svg#icon-close"></use>
           </svg>
         </button>
@@ -607,9 +664,9 @@
             ></textarea>
           </div>
 
-          <div class="form-field">
+          <div class="form-fiel">
             <input
-              class="input-check visually-hidden"
+              class="input-check section__title--visually-hidden"
               type="checkbox"
               name="user-policy"
               value="true"
@@ -632,6 +689,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
-    <script src="./js/menu.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
