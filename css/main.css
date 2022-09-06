@@ -117,6 +117,7 @@ body {
 
 .mob-menu {
   position: fixed;
+  z-index: 2;
   background-color: var(--primary-background-color);
   top: 0;
   left: 0;
