@@ -33,7 +33,6 @@ a {
 img {
   display: block;
   max-width: 100%;
-  width: 100%;
   height: auto;
 }
 
@@ -576,16 +575,20 @@ body {
   letter-spacing: 0.03em;
 }
 
-.works {
+.section--work {
   display: none;
 }
 @media screen and (min-width: 1200px) {
-  .works {
+  .section--work {
     display: flex;
-    margin-top: 50px;
-    -moz-column-gap: 30px;
-         column-gap: 30px;
   }
+}
+
+.works {
+  display: flex;
+  margin-top: 50px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
 
 .works__item {
@@ -785,6 +788,8 @@ body {
 
 .gallery-link {
   display: block;
+  flex-direction: column;
+  height: 100%;
   transition-property: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .gallery-link:hover, .gallery-link:focus {
@@ -819,6 +824,13 @@ body {
   transform: translateY(0);
 }
 
+.gallery-desc {
+  border: 1px solid #eeeeee;
+  padding: 20px 24px;
+  border-top: none;
+  flex-grow: 1;
+}
+
 .gallery-title {
   margin-bottom: 4px;
   font-weight: 700;
@@ -833,12 +845,6 @@ body {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-}
-
-.gallery-desc {
-  border: 1px solid #eeeeee;
-  padding: 20px 24px;
-  border-top: none;
 }
 
 .footer {
@@ -920,6 +926,15 @@ body {
   color: var(--secondary-text-color);
 }
 
+.join-box {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .join-box {
+    margin-right: 93px;
+  }
+}
+
 .footer__title {
   font-weight: 700;
   font-size: 14px;
@@ -928,12 +943,6 @@ body {
   text-transform: uppercase;
   color: var(--secondary-text-color);
   margin-bottom: 20px;
-}
-
-@media screen and (min-width: 1200px) {
-  .subscribe-box {
-    margin-left: auto;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -962,12 +971,22 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  width: 358px;
+  min-width: 290px;
   height: 50px;
   color: var(--secondary-text-color);
   background-color: transparent;
   /* outline: transparent; */
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .footer__input {
+    min-width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__input {
+    min-width: 358px;
+  }
 }
 .footer__input:focus {
   border-color: var(--accent-color);

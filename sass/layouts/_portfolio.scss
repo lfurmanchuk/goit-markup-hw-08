@@ -64,6 +64,8 @@
 
 .gallery-link {
     display: block;
+    flex-direction: column;
+    height: 100%;
     transition-property: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
     &:focus {
@@ -101,6 +103,13 @@
     }
 }
 
+.gallery-desc {
+    border: 1px solid #eeeeee;
+    padding: 20px 24px;
+    border-top: none;
+    flex-grow: 1;
+}
+
 .gallery-title {
     margin-bottom: 4px;
     font-weight: 700;
@@ -117,8 +126,3 @@
     color: var(--primary-text-color);
 }
 
-.gallery-desc {
-    border: 1px solid #eeeeee;
-    padding: 20px 24px;
-    border-top: none;
-}
